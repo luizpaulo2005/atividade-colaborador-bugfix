@@ -26,6 +26,12 @@ function setup(){
   });
 
   // placeholder; features/bugfixes irão aqui
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault();
+      form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+    }
+  });
   const applyTheme = (mode) => {
     document.body.classList.toggle('light', mode === 'light');
   };
