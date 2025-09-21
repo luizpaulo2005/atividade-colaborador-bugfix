@@ -26,8 +26,15 @@ function setup(){
   });
 
   // placeholder; features/bugfixes irão aqui
+  const applyTheme = (mode) => {
+    document.body.classList.toggle('light', mode === 'light');
+  };
+  const saved = localStorage.getItem('atv3.theme');
+  if (saved) applyTheme(saved);
   toggle.addEventListener('click', () => {
-    document.body.classList.toggle('light');
+    const mode = document.body.classList.contains('light') ? 'dark' : 'light';
+    applyTheme(mode);
+    localStorage.setItem('atv3.theme', mode);
   });
 }
 
