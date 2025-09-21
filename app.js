@@ -31,6 +31,10 @@ function setup(){
       e.preventDefault();
       form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
     }
+    if (e.key === 'Escape') {
+      input.value = '';
+      input.blur();
+    }
   });
   const applyTheme = (mode) => {
     document.body.classList.toggle('light', mode === 'light');
