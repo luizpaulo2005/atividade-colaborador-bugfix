@@ -10,4 +10,6 @@ button{cursor:pointer}
 ul{list-style:none;padding:0;display:grid;gap:8px}
 li{padding:10px;border:1px solid #1f2937;border-radius:8px;background:#0b1220}
 /* tema claro */
-.light{--bg:#f8fafc;--text:#0f172a;--panel:#e5e7eb;--muted:#475569}
+.light{--bg:#f8fafc;--text:#0f172a;--panel:#e2e8f0;--muted:#475569}
+header{border-bottom:1px solid #1f2937}
+.light header{border-bottom:1px solid #94a3b8}
