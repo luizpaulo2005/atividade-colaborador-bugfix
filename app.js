@@ -15,6 +15,7 @@ function render(){
 function setup(){
   const form = document.getElementById('form');
   const input = document.getElementById('item');
+  const toggle = document.getElementById('toggle-theme');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const v = (input.value||'').trim();
@@ -25,6 +26,9 @@ function setup(){
   });
 
   // placeholder; features/bugfixes irão aqui
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+  });
 }
 
 document.addEventListener('DOMContentLoaded', setup);
